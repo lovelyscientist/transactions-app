@@ -5,6 +5,6 @@ angular
 function todoItem () {
   return {
     restrict: 'E',
-    templateUrl: 'js/todos/todoTemplate.html'
+    templateUrl: 'js/transactions/todoTemplate.html'
   }
 }
