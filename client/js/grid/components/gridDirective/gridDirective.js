@@ -13,7 +13,7 @@ function grid ($compile) {
       },
 
       controller: function($scope) {
-          $scope.predicate = 'name';
+          $scope.predicate = 'type';
           $scope.reverse = true;
           $scope.PAGE_SIZE = 8;
           $scope.start = 0;
@@ -36,6 +36,8 @@ function grid ($compile) {
           };
           
           $scope.order = function (predicate) {
+            console.log(predicate);
+            console.log($scope.predicate);
               if ($scope.predicate === predicate) {
                   $scope.reverse = !$scope.reverse;
               } else {
@@ -45,9 +47,10 @@ function grid ($compile) {
           };
 
           $scope.handleDrop = function(draggedData, targetElem) {
-    	      	let srcInd = $scope.conf.heads.indexOf(draggedData),
-    	        	  destInd = $scope.conf.heads.indexOf(targetElem.textContent);
+    	      	let srcInd = $scope.conf.heads.map(function(e) { return e.title; }).indexOf(draggedData),
+    	        	  destInd = $scope.conf.heads.map(function(e) { return e.title; }).indexOf(targetElem.textContent);
 
+              
     	        swapArrayElements($scope.conf.heads, srcInd, destInd);
 
     	        function swapArrayElements(array, index_a, index_b) {

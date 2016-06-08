@@ -34,6 +34,10 @@ function ListController ($scope, $modal,$ionicModal, $filter) {
   $scope.showModal = function() {
         myModal.show();
   };
-  $scope.selectedDate = $filter('date')(new Date());
-  $scope.selectedDateAsNumber = Date.UTC(1986, 1, 22);
+  
+  $scope.currentTransaction = {
+    selectedDate: $filter('date')(new Date()),
+    amount: 0,
+    type: "Food"
+  }
 }

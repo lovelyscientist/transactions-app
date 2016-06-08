@@ -7,7 +7,11 @@ GridController.$inject = ['$scope', 'transactionsStore'];
 function GridController ($scope, transactionsStore) { 
 
     $scope.config = {
-      heads: ['date', 'amount', 'type']
+      heads: [
+          {title: 'Date', key:'date'},
+          {title: 'Amount', key: 'amount'}, 
+          {title: 'Type', key: 'type'}
+      ]
     };
 
      $scope.config.data = transactionsStore.transactions;
