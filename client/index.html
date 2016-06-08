@@ -8,10 +8,12 @@
         <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'>
         <link href="//code.ionicframework.com/nightly/css/ionic.css" rel="stylesheet">
          <script src="//code.ionicframework.com/nightly/js/ionic.bundle.js"></script>
+         <link rel="stylesheet" href="style/style_grid.css">
          <link rel="stylesheet" href="style/style.css">
         <title>Check your budget</title>
         </head>
         <body ng-controller="ListController">
+        <div class="wrapper">
             <div class="headerMenu">
                 <div class="menus">
                     <div class="tip">
@@ -21,7 +23,7 @@
                        <div class="tip_text"> Home</div>
                     </div>
                     <div class="tip">
-                        <div class="circle_p" ui-sref="add-transaction" ng-click="showModal()">
+                        <div class="circle_p"  ng-click="showModal()">
                             <i class="fa fa-plus" aria-hidden="true"></i>
                         </div>
                        <div class="tip_text"> Add Transactions </div>
@@ -39,6 +41,7 @@
                     <div ui-view></div>
                 </div>
             </div>
+        </div>
 
         <script src="js/bower_components/angular/angular.js"></script>
         <script src="js/bower_components/angular-animate/angular-animate.js"></script>
@@ -51,6 +54,7 @@
         <script src="js/grid/components/draggableDirective/draggableDirective.js"></script>
         <script src="js/grid/components/gridDirective/gridDirective.js"></script>
         <script src="js/transactions/transactionsModule.js"></script>
+        <script src="js/transactions/transactionsService.js"></script>
         <script src="js/transactions/transactionsController.js"></script>
         <script src="js/transactions/transactionsDirective.js"></script>
         <script src="js/transactions/config.js"></script>

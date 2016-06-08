@@ -1,11 +1,18 @@
-.headerMenu{
+.wrapper{
+	border: 1px solid  #443366;
+	padding: 10px;
 	width: 40%;
+	margin: auto;
+	margin-top: 150px;
+	border-radius: 20px;
+}
+.headerMenu{
+	width: 100%;
 	height: 50px;
-	background-color:  #acd2cd;
+	background-color:  white;
 	text-align: center;
 	vertical-align: middle;
 	margin: auto;
-	margin-top: 150px;
 }
 .menus{
 	vertical-align: middle;
@@ -22,7 +29,7 @@
 .circle_p{
 	background-color: #443366;
 	color: white;
-	border: 2px solid white;
+	border: 3px solid #acd2cd;;
 	border-radius: 20px;
 	width: 35px;
 	height: 35px;
@@ -40,7 +47,7 @@
 	color: #443366;
 }
 .main{
-	width: 40%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 1%;
 	padding: 5px;
@@ -48,6 +55,7 @@
 	padding-bottom: 10px;
 	background-color: #acd2cd;
 	height: 550px;
+	border-radius: 15px;
 }
 .inputArea{
 	margin: 5px;

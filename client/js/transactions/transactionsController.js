@@ -2,9 +2,9 @@ angular
     .module('app')
     .controller('ListController', ListController);
 
-ListController.$inject = ['$scope', '$modal', '$ionicModal'];
+ListController.$inject = ['$scope', '$modal', '$ionicModal', '$filter'];
 
-function ListController ($scope, $modal,$ionicModal) {
+function ListController ($scope, $modal,$ionicModal, $filter) {
   $scope.todos = [{text: 'make todo on angular', number: 1}];
   $scope.lastTodo='';
 
@@ -29,11 +29,11 @@ function ListController ($scope, $modal,$ionicModal) {
       $scope.lastTodo = '';
   };
 
-   var myModal = $modal({title: "Title", templateUrl: "js/transactions/addTransaction.html", placement: 'center', show: false, backdrop: 'static', controller: 'ListController', $scope: $scope});
+   var myModal = $modal({title: "Title", templateUrl: "js/transactions/addTransactionV2.html", placement: 'center', show: false, backdrop: 'static', controller: 'ListController', $scope: $scope});
 
   $scope.showModal = function() {
         myModal.show();
   };
-  $scope.selectedDate = new Date();
+  $scope.selectedDate = $filter('date')(new Date());
   $scope.selectedDateAsNumber = Date.UTC(1986, 1, 22);
 }
