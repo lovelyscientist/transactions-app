@@ -1,16 +1,13 @@
 .hidtable {
     cursor:move;
     border-style:dotted;
-    z-index:4;
 }
 .coverhidtable {
     cursor:move;
     color:white;
-    z-index:4;
 }
 .acttable {
     cursor:move;
-    z-index:5;
 }
 .acttable th{
   padding:10px;
@@ -56,4 +53,28 @@
 }
 .mytable{
     border-radius: 10px;
+}
+.pagination{
+    font-size: 22px;
+    font-weight: 100;
+    font-family: 'Indie Flower', cursive;
+    text-align: left;
+    width: 100%;
+    vertical-align: bottom;
+}
+.pagination-title{
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+}
+.pagination-links{
+    display: inline-block;
+    width: 45%;
+    text-align: right;
+}
+.pagination a:disabled {
+  color: #FF85A1;
+}
+.main-grid{
+    height: 550px;
 }

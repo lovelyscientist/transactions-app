@@ -15,7 +15,7 @@ function grid ($compile) {
       controller: function($scope) {
           $scope.predicate = 'type';
           $scope.reverse = true;
-          $scope.PAGE_SIZE = 8;
+          $scope.PAGE_SIZE = 5;
           $scope.start = 0;
           $scope.dragHead = '';
 

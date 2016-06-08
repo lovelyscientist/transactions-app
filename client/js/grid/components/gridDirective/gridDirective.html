@@ -1,4 +1,4 @@
-<div>
+<div class="main-grid">
   <table class="table table-bordered acttable mytable" >
     <thead class="mytable" style="border-radius: 7px;">
       <th class="drag" style="cursor:move" draggable drag="handleDrag"  dragData="{{hd.title}}" droppable drop="handleDrop" ng-repeat="hd in conf.heads">
@@ -13,13 +13,13 @@
         <td ng-repeat="header in conf.heads"><span>{{record[header.key]}}</span>
         </td>
       </tr>
-      <tr >
-        <td class="next-prev" colspan="5">Page(s): {{pages}} <span style="padding:5px"> showing {{PAGE_SIZE}} records per page</span>
-         <span class="next-prev" style="float:right;padding:5px"><a ng-hide="hidePrev()" href="" ng-click="prevPage()">Prev</a></span>
-        <span class="next-prev" style="float:right;padding:5px"><a ng-hide="hideNext()" href="" ng-click="nextPage()">Next</a></span></td>
-      </tr>
     </tbody>
   </table>
+  <div class="pagination">
+          <div class="next-prev">Page(s): {{start/PAGE_SIZE + 1}} <br> <span style="padding:5px"> Showing {{PAGE_SIZE}} records per page</span>
+          <p class="next-prev" style="float:right;padding:5px"><a ng-hide="hidePrev()" href="" ng-click="prevPage()">Prev</a></p>
+          <p class="next-prev" style="float:right;padding:5px"><a ng-hide="hideNext()" href="" ng-click="nextPage()">Next</a></p></div> 
+  </div>
 </div>
 
      

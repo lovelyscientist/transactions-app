@@ -2,9 +2,9 @@ angular
     .module('app')
     .controller('ListController', ListController);
 
-ListController.$inject = ['$scope', '$modal', '$ionicModal', '$filter'];
+ListController.$inject = ['$scope', '$modal', '$ionicModal', '$filter', 'transactionsStore'];
 
-function ListController ($scope, $modal,$ionicModal, $filter) {
+function ListController ($scope, $modal,$ionicModal, $filter, transactionsStore) {
   $scope.todos = [{text: 'make todo on angular', number: 1}];
   $scope.lastTodo='';
 
@@ -36,8 +36,13 @@ function ListController ($scope, $modal,$ionicModal, $filter) {
   };
   
   $scope.currentTransaction = {
-    selectedDate: $filter('date')(new Date()),
-    amount: 0,
+    date: '',
+    amount: '',
     type: "Food"
+  }
+
+  $scope.addTransaction = function () {
+      $scope.currentTransaction.amount = parseFloat($scope.currentTransaction.amount);
+      transactionsStore.transactions.push($scope.currentTransaction);
   }
 }
