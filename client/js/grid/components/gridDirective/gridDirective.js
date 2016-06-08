@@ -36,8 +36,6 @@ function grid ($compile) {
           };
           
           $scope.order = function (predicate) {
-            console.log(predicate);
-            console.log($scope.predicate);
               if ($scope.predicate === predicate) {
                   $scope.reverse = !$scope.reverse;
               } else {

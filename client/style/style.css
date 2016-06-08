@@ -1,5 +1,5 @@
 .wrapper{
-	border: 1px solid  #443366;
+	border: 3px solid  #443366;
 	padding: 10px;
 	width: 40%;
 	margin: auto;
@@ -29,7 +29,7 @@
 .circle_p{
 	background-color: #443366;
 	color: white;
-	border: 3px solid #acd2cd;;
+	border: 3px solid #acd2cd;
 	border-radius: 20px;
 	width: 35px;
 	height: 35px;
@@ -155,7 +155,16 @@ input{
 	width: 80px;
 } 
 .myFormBtn:hover{
-	background-color: #acd2cd;
-	color:  #443366;
+	background-color: #695b84;
+	color:  #acd2cd;
 	border: 1px solid  #443366;
 } 
+.form-horizontal input.ng-invalid {
+    background-color:red;
+}
+.form-horizontal input.ng-valid {
+    background-color:#acd2cd;
+}
+.form-horizontal input.ng-pristine {
+    background-color: white;
+}

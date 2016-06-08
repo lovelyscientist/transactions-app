@@ -1,10 +1,10 @@
 angular
-	.module('app')
+	.module('listApp')
 	.directive('todoItem', todoItem);
 
 function todoItem () {
   return {
     restrict: 'E',
-    templateUrl: 'js/transactions/todoTemplate.html'
+    templateUrl: 'js/todos/todoTemplate.html'
   }
 }
