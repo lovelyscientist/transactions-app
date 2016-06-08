@@ -3,7 +3,7 @@
     <thead class="mytable" style="border-radius: 7px;">
       <th class="drag" style="cursor:move" draggable drag="handleDrag"  dragData="{{hd.title}}" droppable drop="handleDrop" ng-repeat="hd in conf.heads">
         
-        <a href="" ng-click="order(hd.title)">{{hd.title}}</a>
+        <a href="" ng-click="order(hd.key)">{{hd.title}}</a>
         <span class="sortorder" ng-show="predicate === hd.key" ng-class="{reverse:reverse}"></span>
     
       </th>
